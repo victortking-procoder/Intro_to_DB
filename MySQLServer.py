@@ -18,8 +18,8 @@ try:
     print("Database 'alx_book_store' created successfully!")
 
     mydb.commit()
-except Error as e:
-    print("Error while connecting to Mysql:", e)
+except mysql.connector.Error as e:
+    print(e)
 finally:
     mycursor.close()
     mydb.close()
